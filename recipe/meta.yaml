@@ -41,16 +41,16 @@ test:
 
 about:
   home: panel-material-ui.holoviz.org
-    summary: An extension to bring MaterialUI components to Panel.
-    description: |
-      Panel Material UI is a modern theming and component library that brings the design
-      system of Material UI to Panel-based dashboards and data applications. It provides
-      a consistent look and feel, seamless dark-mode support, and full theming via
-      Material UI’s theme system (palette, typography, spacing). The library includes a
-      rich set of ready-to-use UI components—such as buttons, sliders, cards, dialogs,
-      menus, and grids—that integrate smoothly with Panel’s layout and reactive model.
-      With Panel Material UI, you can build modern, responsive, and branded dashboards
-      in Python while leveraging Panel’s ecosystem.
+  summary: An extension to bring MaterialUI components to Panel.
+  description: |
+    Panel Material UI is a modern theming and component library that brings the design
+    system of Material UI to Panel-based dashboards and data applications. It provides
+    a consistent look and feel, seamless dark-mode support, and full theming via
+    Material UI’s theme system (palette, typography, spacing). The library includes a
+    rich set of ready-to-use UI components—such as buttons, sliders, cards, dialogs,
+    menus, and grids—that integrate smoothly with Panel’s layout and reactive model.
+    With Panel Material UI, you can build modern, responsive, and branded dashboards
+    in Python while leveraging Panel’s ecosystem.
   dev_url: https://github.com/panel-extensions/panel-material-ui
   license: BSD-3-Clause
   license_file: LICENSE.txt
