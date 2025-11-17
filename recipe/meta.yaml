@@ -40,7 +40,7 @@ test:
     - pip
 
 about:
-  home: panel-material-ui.holoviz.org
+  home: https://panel-material-ui.holoviz.org
   summary: An extension to bring MaterialUI components to Panel.
   description: |
     Panel Material UI is a modern theming and component library that brings the design
