@@ -20,7 +20,6 @@ requirements:
     - hatchling
     - hatch-vcs
     - panel >=1.8.0
-    - nodejs >=22.*
     - nodejs 22.*
     - esbuild 0.25.4
     - packaging
