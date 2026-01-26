@@ -50,7 +50,6 @@ about:
     menus, and grids—that integrate smoothly with Panel's layout and reactive model.
     With Panel Material UI, you can build modern, responsive, and branded dashboards
     in Python while leveraging Panel's ecosystem.
-  dev_url: https://github.com/panel-extensions/panel-material-ui
   license: BSD-3-Clause
   license_file: LICENSE.txt
   license_family: BSD
