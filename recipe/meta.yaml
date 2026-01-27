@@ -31,12 +31,18 @@ requirements:
     - packaging
 
 test:
+  source_files:
+    - tests
   imports:
     - panel_material_ui
   commands:
     - pip check
+    - pytest -ra -vv --tb=short tests
   requires:
     - pip
+    - pytest
+    - pytest-asyncio
+    - plotly
 
 about:
   home: https://panel-material-ui.holoviz.org
