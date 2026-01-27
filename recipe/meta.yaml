@@ -58,6 +58,8 @@ about:
 
 
 extra:
+  skip-lints:
+    - host_section_needs_exact_pinnings
   recipe-maintainers:
     - maximlt
     - philippjfr
