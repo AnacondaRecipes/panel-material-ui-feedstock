@@ -1,5 +1,5 @@
 {% set name = "panel-material-ui" %}
-{% set version = "0.6.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/panel_material_ui-{{ version }}.tar.gz
-  sha256: 78ab1078ed88f4fc825ee5b553f26cca6647085ca17299c530c1c50de4dde666
+  sha256: dbee977b2ff54019ff8ed373be0601034ac1d8e12c2c3ed70ca51307a474dce8
 
 build:
-  number: 1
+  number: 0
   skip: True # [py<310]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -31,12 +31,20 @@ requirements:
     - packaging
 
 test:
+  source_files:
+    - tests
+    - examples
+    - doc
   imports:
     - panel_material_ui
   commands:
     - pip check
+    - pytest -ra -vv --tb=short tests
   requires:
     - pip
+    - pytest
+    - pytest-asyncio
+    - plotly
 
 about:
   home: https://panel-material-ui.holoviz.org
@@ -50,7 +58,6 @@ about:
     menus, and grids—that integrate smoothly with Panel's layout and reactive model.
     With Panel Material UI, you can build modern, responsive, and branded dashboards
     in Python while leveraging Panel's ecosystem.
-  dev_url: https://github.com/panel-extensions/panel-material-ui
   license: BSD-3-Clause
   license_file: LICENSE.txt
   license_family: BSD
@@ -59,6 +66,8 @@ about:
 
 
 extra:
+  skip-lints:
+    - host_section_needs_exact_pinnings
   recipe-maintainers:
     - maximlt
     - philippjfr
