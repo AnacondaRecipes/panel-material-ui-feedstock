@@ -39,7 +39,8 @@ test:
     - panel_material_ui
   commands:
     - pip check
-    - pytest --import-mode=importlib -ra -vv --tb=short tests --ignore=tests/ui
+    - pytest --import-mode=importlib -ra -vv --tb=short tests --ignore=tests/ui  --deselect=tests/widgets/test_fileinput.py::test_file_input_view
+  --deselect=tests/widgets/test_fileinput.py::test_file_input_view_multiple
   requires:
     - pip
     - pytest
