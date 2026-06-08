@@ -1,2 +1,6 @@
-build_env_vars:
-  ANACONDA_ROCKET_ENABLE_PY314 : yes
+# TODO: Remove this (specifically --no-test) after panel 1.9.0 is released.
+build_parameters:
+  - "--suppress-variables"
+  - "--skip-existing"
+  - "--error-overlinking"
+  - "--no-test"
