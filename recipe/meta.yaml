@@ -2,7 +2,7 @@
 {% set version = "0.14.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
@@ -19,14 +19,14 @@ requirements:
     - python
     - hatchling
     - hatch-vcs
-    - panel >=1.8.0
+    - panel-core >=1.8.0
     - nodejs 24.*
     - esbuild 0.25.4
     - packaging
     - pip
   run:
     - python
-    - panel >=1.8.0
+    - panel-core >=1.8.0
     - bokeh >=3.8.0
     - packaging
 
