@@ -1,17 +1,17 @@
 {% set name = "panel-material-ui" %}
-{% set version = "0.12.0" %}
+{% set version = "0.14.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/panel_material_ui-{{ version }}.tar.gz
-  sha256: 8ca39c181fad38bb8289209a6013ce073d43c1c224cd1c1d03bf95b8622d6aa2
+  sha256: 486f1e163aa62c2221a5a0003208feb143b135ff563f418d1df30ce2647db665
 
 build:
   number: 0
-  skip: True # [py<310]
+  skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -19,14 +19,14 @@ requirements:
     - python
     - hatchling
     - hatch-vcs
-    - panel >=1.8.0
+    - panel-core >=1.8.0
     - nodejs 24.*
     - esbuild 0.25.4
     - packaging
     - pip
   run:
     - python
-    - panel >=1.9.0
+    - panel-core >=1.8.0
     - bokeh >=3.8.0
     - packaging
 
@@ -63,7 +63,6 @@ about:
   license_family: BSD
   dev_url: https://github.com/panel-extensions/panel-material-ui
   doc_url: https://panel-material-ui.holoviz.org/
-
 
 extra:
   skip-lints:
