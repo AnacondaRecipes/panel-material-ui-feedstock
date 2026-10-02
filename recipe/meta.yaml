@@ -1,5 +1,5 @@
 {% set name = "panel-material-ui" %}
-{% set version = "0.14.2" %}
+{% set version = "0.16.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/panel_material_ui-{{ version }}.tar.gz
-  sha256: 4b4e9d6f771294d778b6c13ea77348a633d55e48264dfa803f4d8bbd9d5ebf6a
+  sha256: 7dedb37dfa11db1cf8dcc4644368f15ab6063c6e9a978daeee1de6692005297b
 
 build:
   number: 0
@@ -20,10 +20,10 @@ requirements:
     - hatchling
     - hatch-vcs
     # As defined in upstream conda-forge:
-    # https://github.com/conda-forge/panel-material-ui-feedstock/blob/01ec45b791c318e6130da688503f5653f421388a/recipe/meta.yaml#L23
-    # uses panel >=1.8.0 lead to depend-on-themselves problem.
-    - panel-core >=1.8.0
-    # https://github.com/conda-forge/panel-material-ui-feedstock/blob/01ec45b791c318e6130da688503f5653f421388a/recipe/meta.yaml#L24
+    # https://github.com/conda-forge/panel-material-ui-feedstock/blob/bfcb8b5ab3fb0cfd49c142dfcae7a4d2ad2bb324/recipe/meta.yaml#L23
+    # uses panel >=1.9.0 lead to depend-on-themselves problem.
+    - panel-core >=1.9.0
+    # https://github.com/conda-forge/panel-material-ui-feedstock/blob/bfcb8b5ab3fb0cfd49c142dfcae7a4d2ad2bb324/recipe/meta.yaml#L24
     - nodejs >=22.*
     - esbuild 0.25.4
     - packaging
@@ -31,9 +31,9 @@ requirements:
   run:
     - python
     # As defined in upstream conda-forge:
-    # https://github.com/conda-forge/panel-material-ui-feedstock/blob/01ec45b791c318e6130da688503f5653f421388a/recipe/meta.yaml#L30
-    # uses panel >=1.8.0 lead to depend-on-themselves problem.
-    - panel-core >=1.8.0
+    # https://github.com/conda-forge/panel-material-ui-feedstock/blob/bfcb8b5ab3fb0cfd49c142dfcae7a4d2ad2bb324/recipe/meta.yaml#L30
+    # uses panel >=1.9.0 lead to depend-on-themselves problem.
+    - panel-core >=1.9.0
     - bokeh >=3.8.0
     - packaging
 
