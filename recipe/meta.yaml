@@ -22,7 +22,9 @@ requirements:
     # As defined in upstream conda-forge:
     # https://github.com/conda-forge/panel-material-ui-feedstock/blob/bfcb8b5ab3fb0cfd49c142dfcae7a4d2ad2bb324/recipe/meta.yaml#L23
     # uses panel >=1.9.0 lead to depend-on-themselves problem.
-    - panel-core >=1.9.0
+    # panel-core is a run-time dependency only. Keeping it in host creates a
+    # build-order cycle with panel-feedstock (panel needs panel-material-ui at
+    # host, panel-material-ui needs panel-core from panel).
     # https://github.com/conda-forge/panel-material-ui-feedstock/blob/bfcb8b5ab3fb0cfd49c142dfcae7a4d2ad2bb324/recipe/meta.yaml#L24
     - nodejs >=22.*
     - esbuild 0.25.4
