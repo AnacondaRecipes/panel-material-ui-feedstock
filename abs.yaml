@@ -1,6 +1,0 @@
-# TODO: Remove this (specifically --no-test) after panel 1.9.0 is released.
-build_parameters:
-  - "--suppress-variables"
-  - "--skip-existing"
-  - "--error-overlinking"
-  - "--no-test"
